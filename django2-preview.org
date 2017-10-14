@@ -1,0 +1,13 @@
+* this file and associated code on github at: 
+* Deprecated features removed
+* Features newly deprecated
+* Interesting new features
+** Simplified URL Routing Syntax
+*** note that we'll get ints instead of strings now
+** Window expressions
+* Example
+** start with tutorial.djangogirls.com
+** hopefully, it just updates!
+** if not, fiddle with it until it does
+** then add some libraries and see how it goes
+** hopefully there will be some problems to solve along the way or this will be pretty boring
