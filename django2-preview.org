@@ -1,13 +1,42 @@
-* this file and associated code on github at: 
-* Deprecated features removed
+* this file and associated code on github at https://github.com/jonkiparsky/django2talk
+* trying it out
+** pretty easy! once you upgrade, manage.py should find the right version
+** if you have python2 as your default, you'll have to specify python3 when running manage.py
+** so if you're running in a virtualenv for example: 
+*** pip install --upgrade --pre django
+* compatibility
+** no more python2 support
+** on_delete is now required on ForeignKey and OneToOneField
+*** this will probably be the most annoying thing you have to deal with
+
+*** python3 manage.py runserver
+* Features removed
+** mostly pretty innocuous. The maintainers have been pretty good at flagging future deprecations
+** "The on_delete argument for ForeignKey and OneToOneField is now required in models and migrations."
+*** Have you got on_delete set on all of your ForeignKeys? No? Better fix that. 
+*** https://docs.djangoproject.com/en/2.0/ref/models/fields/
 * Features newly deprecated
 * Interesting new features
 ** Simplified URL Routing Syntax
 *** note that we'll get ints instead of strings now
 ** Window expressions
+
 * Example
 ** start with tutorial.djangogirls.com
-** hopefully, it just updates!
-** if not, fiddle with it until it does
+** to update: pip3 --update --pre django
+** Surprise, only one thing needs to be fixed!
 ** then add some libraries and see how it goes
 ** hopefully there will be some problems to solve along the way or this will be pretty boring
+* new versioning 
+** Feature releases will be numbered X.0, X.1, X.2, Y.0, Y.1, Y.2, ... Y.8, Z.0....
+** LTS releases will be the last release under a given major verion number. To find the latest LTS, look for 
+the most recent X.0 release, and take the release before that. 
+** Patch releases will continue to be "yes, do it" releases. 
+** deprecations:
+*** features deprecated in X.Y will be kept for all X. releases
+*** if a feature is deprecated in the last (LTS) release of X, it will be removed in Y.1, not Y.0
+
+
+TO DO:
+* install some 3rd-party libraries and see how they fare
+*

@@ -14,7 +14,7 @@
       </span>
     </a>
     {% endif %}
-    <h1>{{ post.title }}</h1>
+    <h1>{{ post.title }}: {{ post.country.name }}</h1>
     <p>{{ post.text|linebreaksbr }}</p>
   </div>
 {% endblock %}
